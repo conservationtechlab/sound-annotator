@@ -1,14 +1,14 @@
 # sound-annotator
 
 GUI tool for annotating sound events manually from a spectrogram and
-playback.  Built by Gabriel Cano during a summer fellowship with the
-San Diego Zoo Conservation Technology Lab.
+audio playback.  Built by Gabriel Cano during a summer fellowship with
+the San Diego Zoo Conservation Technology Lab.
 
-The application is meant to look at WAV files and works best for those
-created by AudioMoth devices.
+The application is meant to use WAV files as input and works best for
+those created by AudioMoth devices.
 
-This application has been tested the most on macOS (Mojave and
-Catalina) but has also been using on Ubuntu 18.04. 
+The application has been tested the most on macOS (Mojave and
+Catalina) but has also been used on Ubuntu 18.04.
 
 ## Setup
 Clone the repo. For help check these
@@ -23,9 +23,10 @@ Install pip if needed. For help check these
 Download dependencies by running:
 `pip install -r requirements.txt`
 
-On Ubuntu: you may have to install some additional packages (e.g. sudo
-apt install libasound2-dev).  These include (but may not be limited
-to):
+On Ubuntu: you may have to install some additional Debian packages
+(e.g. sudo apt install libasound2-dev).  These include (but may not be
+limited to):
+
 - libasound2-dev
 
 To run program:
@@ -40,22 +41,22 @@ This opens a dialog box where you can type or choose the:
 
 - data path (the path of the folder where the WAV files are stored)
 
-- save path (the full path of a file into which you want the record
-the annotations as a csv.  This file does need to already exist but
-(as of this writing) a filename must be given in this field or the
-program will crash (SOMEONE SHOULD ADDRESS THIS).
+- save path (file for csv annotation record (path is optional but
+filename is not optional (at time of this writing filename absence
+results in crash). File does not need to already exist.)
 
 The "Minimum Duration" value you supply will force selections to be at
-least that many seconds long (OTHERWISE ARE THEY JUST IGNORED? OR WHAT?).
+least that many seconds long.
 
 ![Alt text](/screenshots/new_session.png?raw=true)
 
 ## Load a previous session
 File -> Load Session
 
-This opens a file browser where you need to select a configuration
-file (.yaml). It will open the session to the file you left off on and
-it will continue saving to the same save file.
+This opens a file browser where you need to select the configuration
+file (.yaml) saved when ending a previous session. It will open the
+session to the WAV file you left off on and it will continue saving to
+the same csv output file.
 
 ## Create an annotation
 
