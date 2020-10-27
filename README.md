@@ -13,6 +13,12 @@ Install pip if needed. For help check these [instructions](https://pip.pypa.io/e
 Download dependencies by running:
 `pip install -r requirements.txt`
 
+On Ubuntu: you may have to install some additional packages (e.g. sudo
+apt install libasound2-dev).  These include (but may not be limited
+to):
+
+libasound2-dev
+
 To run program:
 `python3 main.py`
 
